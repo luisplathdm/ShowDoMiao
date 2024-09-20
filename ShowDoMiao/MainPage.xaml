@@ -23,7 +23,7 @@
                FontSize="Large" />
 
       
-        <Button x:Name="Botao1" 
+        <Button x:Name="OnBtnResposta01Clicked" 
                 Grid.Row="2" 
                 Grid.ColumnSpan="3" 
                 Text="Botão 01 A" 
@@ -33,7 +33,7 @@
                 BorderColor="#156483"
                 BorderWidth="1" />
 
-        <Button x:Name="Botao2" 
+        <Button x:Name="OnBtnResposta02Clicked" 
                 Grid.Row="3" 
                 Grid.ColumnSpan="3" 
                 Text="Botão 02 B" 
@@ -43,7 +43,7 @@
                 BorderColor="#156483"
                 BorderWidth="1"/>
 
-        <Button x:Name="Botao3" 
+        <Button x:Name="OnBtnResposta03Clicked" 
                 Grid.Row="4" 
                 Grid.ColumnSpan="3" 
                 Text="Botão 03 C" 
@@ -53,7 +53,7 @@
                 BorderColor="#156483"
                 BorderWidth="1"/>
 
-        <Button x:Name="Botao4" 
+        <Button x:Name="OnBtnResposta04Clicked" 
                 Grid.Row="5" 
                 Grid.ColumnSpan="3" 
                 Text="Botão 04 D" 
@@ -64,7 +64,7 @@
                 BorderWidth="1"
             />
 
-        <Button x:Name="Botao5" 
+        <Button x:Name="OnBtnResposta05Clicked" 
                 Grid.Row="6" 
                 Grid.ColumnSpan="3" 
                 Text="Botão 05 E" 

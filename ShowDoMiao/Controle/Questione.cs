@@ -68,26 +68,32 @@ namespace Controle
                 if (respostacoreta == RR)
                     { 
                         var btn = QualBTN( RR);
-                        btn.BackgroundColor = Colors.Green;
+                         btn.BackgroundColor = Colors.Green;
                         return true;
                     }
                     else 
                     {
                         var btnCorreto =  QualBTN(respostacoreta);
+                        
                         var btnIncorreto = QualBTN(RR);
-                        btnCorreto.BackgroundColor = Colors.Yellow;
-                        btnIncorreto.BackgroundColor = Colors.Red;
+                         btnCorreto.BackgroundColor = Colors.Yellow;
+                         btnIncorreto.BackgroundColor = Colors.Red;
                         return false;
                     }
                 }
             private  Button  QualBTN(int RR)
             {
                     if (RR == 1) return buttonResposta01;
-                     else if (RR == 2) return buttonResposta02;
+                    
+                      else if (RR == 2) return buttonResposta02;
+                   
                     else if (RR == 3) return buttonResposta03;
-                     else if (RR == 4) return buttonResposta04;
+                    
+                      else if (RR == 4) return buttonResposta04;
+                  
                     else if (RR == 5) return buttonResposta05;
-                     else return null;
+                     
+                      else return null;
             }
- }
+  }
 }
