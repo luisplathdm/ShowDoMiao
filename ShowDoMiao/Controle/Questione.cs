@@ -16,7 +16,7 @@ namespace Controle
 
        public int respostacoreta =0;
 
-       public int QuestioneLevel;
+       public int Level;
 
        private Label labelPergunta;
 
@@ -62,6 +62,17 @@ namespace Controle
                     buttonResposta03.Text = ThirdQuestion;
                     buttonResposta04.Text = FourthQuestion;
                     buttonResposta05.Text = FiveQuestion;
+
+                    buttonResposta01!.BackgroundColor = Colors.DarkBlue;
+                    buttonResposta01!.TextColor       = Colors.White;
+                    buttonResposta02!.BackgroundColor = Colors.DarkBlue;
+                    buttonResposta02!.TextColor       = Colors.White;
+                    buttonResposta03!.BackgroundColor = Colors.DarkBlue;
+                    buttonResposta03!.TextColor       = Colors.White;
+                    buttonResposta04!.BackgroundColor = Colors.DarkBlue;
+                    buttonResposta04!.TextColor       = Colors.White;
+                    buttonResposta05!.BackgroundColor = Colors.DarkBlue;
+                    buttonResposta05!.TextColor       = Colors.White;
                 }
        public bool VerificarSeEstaCorreta(int RR )
                 {
@@ -73,7 +84,7 @@ namespace Controle
                     }
                     else 
                     {
-                        var btnCorreto =  QualBTN(respostacoreta);
+                        var btnCorreto =  QualBTN(RR);
                         
                         var btnIncorreto = QualBTN(RR);
                          btnCorreto.BackgroundColor = Colors.Yellow;
@@ -81,19 +92,20 @@ namespace Controle
                         return false;
                     }
                 }
-            private  Button  QualBTN(int RR)
-            {
-                    if (RR == 1) return buttonResposta01;
-                    
-                      else if (RR == 2) return buttonResposta02;
-                   
-                    else if (RR == 3) return buttonResposta03;
-                    
-                      else if (RR == 4) return buttonResposta04;
-                  
-                    else if (RR == 5) return buttonResposta05;
-                     
-                      else return null;
-            }
+             private Button QualBTN (int RespostaSelected)
+        {
+            if (RespostaSelected == 1 )
+            return buttonResposta01;
+            else if (RespostaSelected == 2)
+            return buttonResposta02;
+            else if (RespostaSelected == 3)
+            return buttonResposta03;
+            else if (RespostaSelected == 4)
+            return buttonResposta04;
+            else if (RespostaSelected == 5)
+            return buttonResposta05;
+            else 
+            return buttonResposta03;
+        }
   }
 }
