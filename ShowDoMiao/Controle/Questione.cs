@@ -2,33 +2,33 @@ namespace Controle
 {
     public class Questione
     {
-       public string Question;
+       public string? Question;
 
-       public string FirstQuestion;
+       public string? FirstQuestion;
 
-       public string SecondQuestion;
+       public string? SecondQuestion;
 
-       public string ThirdQuestion;
+       public string? ThirdQuestion;
 
-       public string FourthQuestion;
+       public string? FourthQuestion;
 
-        public string FiveQuestion;
+        public string? FiveQuestion;
 
-       public int respostacoreta =0;
+       public int? respostacoreta =0;
 
-       public int Level;
+       public int? Level;
 
-       private Label labelPergunta;
+       private Label? labelPergunta;
 
-       private Button buttonResposta01;
+       private Button? buttonResposta01;
 
-       private Button buttonResposta02;
+       private Button? buttonResposta02;
 
-       private Button buttonResposta03;
+       private Button? buttonResposta03;
 
-       private Button buttonResposta04; 
+       private Button? buttonResposta04; 
 
-       private Button buttonResposta05;
+       private Button? buttonResposta05;
 
 
         public Questione()
