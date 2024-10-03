@@ -34,5 +34,19 @@ public partial class MainPage : ContentPage
 	{
 		gerenciador!.VerificarSeEstaCorreta(5);
 	}
+
+	void OnAjudaClicked (object sender, EventArgs e)
+	{
+		var ajuda = new RetiraErrada();
+		ajuda.ConfigurarDesenho(buttonResposta01,buttonResposta02,buttonResposta03,buttonResposta04,buttonResposta05);
+		ajuda.RealizaAjuda(gerenciador.GetQuestaoCorrente());
+		(sender as Button).IsVisible = false;
+	}
+
+	void OnAjudaPulaClicked(object sender, EventArgs e)
+	{
+		gerenciador.ProximaQuestao();
+		(sender as Button).IsVisible = false;
+	}
 }
 

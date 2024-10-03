@@ -80,6 +80,7 @@
 
        
         <Button x:Name="BotaoCartas" 
+                Clicked="OnAjudaClicked"
                 Grid.Row="7" 
                 Grid.Column="0" 
                 Text="Cartas" 
@@ -89,7 +90,8 @@
                 BorderColor="Gray"
                 BorderWidth="1" />
         
-        <Button x:Name="BotaoTira1" 
+        <Button x:Name="RealizaAjuda" 
+                Clicked="OnAjudaPulaClicked"
                 Grid.Row="7" 
                 Grid.Column="1" 
                 Text="Tira 1" 

@@ -1,7 +1,7 @@
 namespace Controle
 {
-    public class Questione
-    {
+    public class Questione : IEquatable<Questione>
+    { 
        public string? Question;
 
        public string? FirstQuestion;
@@ -36,7 +36,7 @@ namespace Controle
 
         }
        
-        public Questione(Label lp, Button BT01, Button BT02, Button BT03, Button BT04, Button BT05)
+                public Questione(Label lp, Button BT01, Button BT02, Button BT03, Button BT04, Button BT05)
                 {
                     labelPergunta = lp;
                     buttonResposta01 = BT01;
@@ -45,7 +45,7 @@ namespace Controle
                     buttonResposta04 = BT04;
                     buttonResposta05 = BT05;
                 }
-       public void ConfigurarDesenho(Label lp, Button BT01, Button BT02, Button BT03, Button BT04, Button BT05)
+                public void ConfigurarDesenho(Label lp, Button BT01, Button BT02, Button BT03, Button BT04, Button BT05)
                 {
                     labelPergunta = lp;
                     buttonResposta01 = BT01;
@@ -54,7 +54,7 @@ namespace Controle
                     buttonResposta04 = BT04;
                     buttonResposta05 = BT05;
                 }
-       public void Desenhar ()
+                public void Desenhar ()
                 {
                     labelPergunta.Text = Question;
                     buttonResposta01.Text = FirstQuestion;
@@ -74,38 +74,44 @@ namespace Controle
                     buttonResposta05!.BackgroundColor = Colors.DarkBlue;
                     buttonResposta05!.TextColor       = Colors.White;
                 }
-       public bool VerificarSeEstaCorreta(int RR )
+
+                public bool VerificarSeEstaCorreta(int RR )
                 {
                 if (respostacoreta == RR)
-                    { 
+                     { 
                         var btn = QualBTN( RR);
                          btn.BackgroundColor = Colors.Green;
                         return true;
-                    }
-                    else 
-                    {
+                     }
+                      else 
+                      {
                         var btnCorreto =  QualBTN(RR);
                         
                         var btnIncorreto = QualBTN(RR);
                          btnCorreto.BackgroundColor = Colors.Yellow;
                          btnIncorreto.BackgroundColor = Colors.Red;
                         return false;
-                    }
+                      }
+                }
+                public bool Equals(Questione q)
+                {
+                    return this.Level == q.Level && 
+                        this.Pergunta == q.Pergunta;
                 }
              private Button QualBTN (int RespostaSelected)
-        {
-            if (RespostaSelected == 1 )
-            return buttonResposta01;
-            else if (RespostaSelected == 2)
-            return buttonResposta02;
-            else if (RespostaSelected == 3)
-            return buttonResposta03;
-            else if (RespostaSelected == 4)
-            return buttonResposta04;
-            else if (RespostaSelected == 5)
-            return buttonResposta05;
-            else 
-            return buttonResposta03;
-        }
+             {
+                if (RespostaSelected == 1 )
+                 return buttonResposta01;
+                else if (RespostaSelected == 2)
+                 return buttonResposta02;
+                else if (RespostaSelected == 3)
+                 return buttonResposta03;
+                else if (RespostaSelected == 4)
+                 return buttonResposta04;
+                else if (RespostaSelected == 5)
+                 return buttonResposta05;
+                else 
+                 return buttonResposta03;
+            }
   }
 }
