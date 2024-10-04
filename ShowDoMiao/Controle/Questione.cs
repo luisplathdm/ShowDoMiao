@@ -63,6 +63,12 @@ namespace Controle
                     buttonResposta04.Text = FourthQuestion;
                     buttonResposta05.Text = FiveQuestion;
 
+                    buttonResposta01.IsVisible = true;
+                    buttonResposta02.IsVisible = true;
+                    buttonResposta03.IsVisible = true;
+                    buttonResposta04.IsVisible = true;
+                    buttonResposta05.IsVisible = true;
+
                     buttonResposta01!.BackgroundColor = Colors.DarkBlue;
                     buttonResposta01!.TextColor       = Colors.White;
                     buttonResposta02!.BackgroundColor = Colors.DarkBlue;
@@ -96,7 +102,7 @@ namespace Controle
                 public bool Equals(Questione q)
                 {
                     return this.Level == q.Level && 
-                        this.Pergunta == q.Pergunta;
+                        this.Question == q.Question;
                 }
              private Button QualBTN (int RespostaSelected)
              {
