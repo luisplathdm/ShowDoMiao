@@ -5,6 +5,7 @@ namespace ShowDoMiao;
 public partial class MainPage : ContentPage
 {
 	private Gerenciador gerenciador;
+	 int pulou =1;
 	public MainPage()
 	{
 		InitializeComponent();
@@ -42,11 +43,16 @@ public partial class MainPage : ContentPage
 		ajuda.RealizaAjuda(gerenciador.GetQuestaoCorrente());
 		(sender as Button).IsVisible = false;
 	}
-
+    
 	void OnAjudaPulaClicked(object sender, EventArgs e)
 	{
-		gerenciador.ProximaQuestao();
-		(sender as Button).IsVisible = false;
-	}
+		if (pulou == 3)
+		 (sender as Button).IsVisible = false;
+		 else 
+		 {
+			gerenciador.ProximaQuestao();
+			pulou ++;
+		 }
+    }
 }
 

@@ -117,7 +117,7 @@ namespace Controle
                 else if (RespostaSelected == 5)
                  return buttonResposta05;
                 else 
-                 return buttonResposta03;
+                 return null;
             }
   }
 }
