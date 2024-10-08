@@ -46,13 +46,21 @@ public partial class MainPage : ContentPage
     
 	void OnAjudaPulaClicked(object sender, EventArgs e)
 	{
-		if (pulou == 3)
+		
 		 (sender as Button).IsVisible = false;
-		 else 
-		 {
-			gerenciador.ProximaQuestao();
-			pulou ++;
-		 }
+			gerenciador.ProximaQuestao();	
+    }
+	void nAjudaPulaClicked(object sender, EventArgs e)
+	{
+		
+		 (sender as Button).IsVisible = false;
+			gerenciador.ProximaQuestao();	
+    }
+	void OAjudaPulaClicked(object sender, EventArgs e)
+	{
+		
+		 (sender as Button).IsVisible = false;
+			gerenciador.ProximaQuestao();	
     }
 }
 

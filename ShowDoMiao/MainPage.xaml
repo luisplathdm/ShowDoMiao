@@ -94,12 +94,35 @@
                 Clicked="OnAjudaPulaClicked"
                 Grid.Row="7" 
                 Grid.Column="1" 
-                Text="Tira 1" 
+                Text="pular 1" 
                 Margin="5" 
                 BackgroundColor="White" 
                 TextColor="#156483"
                 BorderColor="Gray"
                 BorderWidth="1" />
+       
+          <Button x:Name="RealizaAjudas" 
+                Clicked="nAjudaPulaClicked"
+                Grid.Row="7" 
+                Grid.Column="1" 
+                Text="pular 2" 
+                Margin="5" 
+                BackgroundColor="White" 
+                TextColor="#156483"
+                BorderColor="Gray"
+                BorderWidth="1" />
+      
+         <Button x:Name="RealizaAjudass" 
+                Clicked="OAjudaPulaClicked"
+                Grid.Row="7" 
+                Grid.Column="1" 
+                Text="pular 3" 
+                Margin="5" 
+                BackgroundColor="White" 
+                TextColor="#156483"
+                BorderColor="Gray"
+                BorderWidth="1" />
+                
         
         <Button x:Name="BotaoUniversitarios" 
                 Grid.Row="7" 
